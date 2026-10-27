@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            p, li, pre {
+                font-size: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>
+            1-4. Theory of Everything<br>
+            5. P vs NP<br>
+            6-7. The future of work and meaning
+        </p>
+
+        <p>
+            (I used AI to help with writing)<br>
+            (<a href="https://web.archive.org/web/20261027111549/https://gist.github.com/user1852963074/7cf2be6aa1dfd855d24797aef8a6da33">Archive</a>)
+        </p>
+
+        <hr>
+
+        <h1>What if everything we observe is emergent?</h1>
+
+        <p>Before I get into the model, here is why I started thinking about this. Why would the universe have predefined particles, speed of light, and constants at all? It seems more natural to me that these are not built in from the start, but come out of something simpler. That is the motivation behind everything below.</p>
+        <p>I propose that all particles, speed of light and other constants emerge from simple interactions.</p>
+        <p>The universe is a causal graph that updates at infinite frequency, but it is meaningless to imagine the universe this way. Instead, it is possible to imagine the universe as a 3D grid where cells have an energy value, interact with their neighbors, and an integral update function is used.</p>
+
+        <ol>
+            <li>Explanation for the finite speed of light. Space is continuous and because update frequency is infinite, two infinities cancel and a finite speed of light emerges.</li>
+            <li>Speed of light is not constant. Energy relationship between neighbor cells in the 3D grid determines how fast energy spreads. In observations it looks constant, because vacuum is never absolutely perfectly empty because the energy of the cells is never exactly zero, and the energy distribution of the vacuum is consistent.</li>
+            <li>Relativity emerges because speed of light and time are equivalent.</li>
+            <li>Lorentz invariance violation happens at lowest scales.</li>
+            <li>All particles and constants emerge from interactions between neighboring 3D grid cells.</li>
+        </ol>
+        
+        <hr>
+
+        <h1>What if CMB anomalies exist because the universe is symmetric?</h1>
+
+        <p>The Cosmic Microwave Background (CMB) is the faint glow of microwave radiation that fills all of space. CMB anomalies are statistically significant observational features in the temperature and polarization fluctuations of the CMB that deviate from the statistical predictions of the standard model of cosmology (ΛCDM), for example the Axis of Evil.</p>
+        <p>I propose that these anomalies exist because the universe is symmetric in all directions and has a center. This symmetry exists because I propose that quantum mechanics is deterministic.</p>
+        <p>I consider quantum mechanics to be deterministic for the following reasons: stable structures such as atoms could not form under randomness, and there is no logical way to define randomness.</p>
+        <p>On a previous page, I used a 3D grid to explain how observations emerge.</p>
+        <p>I propose that the universe began from a single cell. This follows from determinism: an equally filled universe would not exist, and therefore the universe must start from a single cell.</p>
+        <p>The center of the universe is a black hole, which appears to create a contradiction, since matter would never spread. I resolve this by proposing that at extremely high mass, a black hole's gravity can form matter. This is possible because I propose that all forces are fundamentally the same, and, as established physics holds, energy is equivalent to matter. For smaller black holes, this effect is known as Hawking radiation; however, only thermal radiation is emitted, because their mass is far lower than that of the central black hole.</p>
+        <p>We exist away from the center and the symmetric axes because the center is a black hole, and the symmetric axes would not allow life to form.</p>
+        <p>I propose a way to test this theory: construct a CMB simulation in which points are randomly distributed with symmetry about the X, Y, and Z axes, place the observer off-center and away from the symmetric axes, generate the CMB, and check whether the anomalies appear.</p>
+
+        <hr>
+
+        <h1>What if quantum spin emerges from asymmetric structure of particles?</h1>
+
+        <p>Quantum spin is an intrinsic form of angular momentum carried by elementary particles, like electrons and quarks. On a previous page I explained that particles emerge from interactions between cells in a 3D grid. Building on that, I propose that particles consist of an asymmetric structure.</p>
+        <p>This is like how molecules consist of atoms; particles consist of specific arrangements of energy that define their function. In a wire, electrons move and align in a specific way because of the uneven affection of electric current on their structure, causing a magnetic field to transfer angular momentum. This also explains why interactions between particles can create different types of particles, like an electron emitting a photon, and the random outcomes in high-energy particle collisions.</p>
+        <p>There is no way to exactly know how interactions between cells work, but it's known that they work in a way that allows structures to form. It's possible to visualize how it approximately works using <a href="http://google.com/search?q=particle+life+simulation&udm=vids">particle life simulation</a>.</p>
+
+        <hr>
+
+        <h1>What if there is no way to know how universe exactly works?</h1>
+
+        <ol>
+            <li>Testing at the required scale is beyond what any current technology can reach. A Theory of Everything would only reveal itself at extraordinarily small distances and high energies, a domain no existing instrument can probe.</li>
+            <li>Simulating physics at that fundamental level is computationally out of reach. Reproducing the universe at such scales would demand computing power far beyond anything achievable, so brute-force simulation is simply not an option.</li>
+            <li>Since the exact workings of the universe remain inaccessible to us, effective field theories are our only practical tool. Frameworks like General Relativity and Quantum Mechanics are what we must rely on, not because they are final, but because they are what works at the scales we can actually observe.</li>
+            <li>The Theory of Everything I have proposed is the most plausible account of how the universe could work.</li>
+        </ol>
+
+        <hr>
+
+        <h1>Here's why I think this polynomial time SAT solver concept is correct</h1>
+
+        <p>I've been working on a polynomial-time SAT solver concept for over a year. Here are the reasons why I think this concept is correct:</p>
+
+        <ol>
+            <li>Doesn't use the resolution rule (which is proven to be exponential).</li>
+            <li>Directly solves the forgetting problem of DPLL.</li>
+            <li>Uses Conflict Tree to prevent re-exploring conflicting branches.</li>
+        </ol>
+
+        <p>This algorithm is based of DPLL (without heuristics, only variable decision) with use of Conflict Tree to avoid re-exploring branches that didnt become satisfied after changing variable</p>
+        <p>Conflict Tree uses same structure as DPLL decision tree, where branches represent variable decisions and leaves store conflict information (all conditions that became unsatisfied after assigning variable)</p>
+        <p>Satisfiability of Conflict Tree can be checked by using AND for branches, OR for all conditions in conflict. Example: x1 && -x1, conflict tree: AND(OR((x1)), OR((-x1)))</p>
+        <p>If AND has only one input, AND(x) = AND(x, x). Example: x2 && -x2, conflict tree: AND(AND(OR((x2)), OR((x2)))) (only left branch because right branch has no free path)</p>
+        <p>Algorithm consists of 3 primary steps:</p>
+
+        <ol>
+            <li>Building conflict tree by getting all unsatisfied conditions in every decision branch</li>
+
+            <li>
+                Updating conflict tree efficiently by checking only affected conditions, using map of variables to conditions that include them.<br>
+                Example: x1 is included in (x1 || -x2), (x1 || x2 || x3). If change x1, update conflict tree by checking only these conditions<br>
+                If satisfiability of conflict changes, check AND that includes current conflict, keep checking further ANDs until root of conflict tree. Every unsatisfied AND becomes part of free path
+            </li>
+
+            <li>Using free paths of conflict tree for alternative decision branch. Skip every decision branch that is outside free path, stop checking once current decision level is further than leaves of conflict tree</li>
+        </ol>
+
+        <p>Algorithm pseudocode:</p>
+
+<pre>function solveSAT {
+    conflict = getConflict
+
+    if (conflict) {
+        return conflict
+    } else {
+        conflictTreeLeft = {left: solveSAT(x_i = 0)}
+        freePaths = updateConflictTree(conflictTreeLeft, x_i = 1)
+        conflictTree = {left: conflictTreeLeft.left, right: solveSAT(x_i = 1, freePaths)}
+
+        return conflictTree
+    }
+}</pre>
+
+        <p>Example: (x8 || x9) && (x8 || -x9) && (-x8 || x9) && (-x8 || -x9)</p>
+
+        <ul>
+            <li>x1..x7 = 0</li>
+            <li>x8 = 0</li>
+            <li>x9 = 0</li>
+            <li>Conflict: (x8 || x9)</li>
+            <li>Update conflict tree (x9 = 1)</li>
+            <li>Free path: x9 = 1</li>
+            <li>x9 = 1</li>
+            <li>Conflict: (x8 || -x9)</li>
+            <li>Backtrack out of current branch</li>
+            <li>Update conflict tree (x8 = 1)</li>
+            <li>Free paths: x9 = 0, x9 = 1</li>
+            <li>x8 = 1</li>
+            <li>x9 = 0</li>
+            <li>Conflict: (-x8 || x9)</li>
+            <li>Update conflict tree (x9 = 1)</li>
+            <li>Free path: x9 = 1</li>
+            <li>x9 = 1</li>
+            <li>Conflict: (-x8 || -x9)</li>
+            <li>Backtrack out of current branch</li>
+            <li>Update conflict tree (x7..1 = 1)</li>
+            <li>No free paths</li>
+            <li>Formula is unsatisfiable</li>
+        </ul>
+
+        <p>(<a href="https://web.archive.org/web/20260821202520/https://gist.github.com/i2lw9ueg6piu7chv2eeby5nylf3b7s/1a855791ce285d2c3a5056233de564da">Archive</a>)</p>
+
+        <hr>
+
+        <p>In the future, people will create "artificial humans": mechanical bodies paired with biological brains, or with an electronic equivalent if neuromorphic systems ever reach that level. The brain, whether biological or electronic, will be connected to mechanical body parts. This will raise a difficult ethical question: is it right to create conscious beings for the purpose of labor?</p>
+        <p>The answer will be that the world has always been a system to be optimized as fully as possible. At this point the reasoning turns mathematical. Electronic systems remain far less efficient than biological brains. They are less energy-efficient per computation, less adaptive, and less capable of the general intelligence that physical labor in an unpredictable world requires. If that gap is permanent, then the most efficient path is not to build better machines but to use the computing substrate nature has already refined: the biological brain. In mathematical terms, the conclusion is straightforward. Use biological brains.</p>
+        <p>But using biological brains means creating conscious beings, and that is exactly what the older ethical principle disallowed. So that principle must be set aside. Not because ethics is unimportant, but because it is a constraint, and the optimization target is defined as maximal. If a constraint prevents the optimum, then by definition it is the thing to remove.</p>
+        <p>As a result, artificial people will be mass-produced. They will replace humans in physical jobs because they perform that work more efficiently. They will earn money and distribute it as a universal basic income for the humans who remain. Humans will no longer work, but their basic needs will be met. The system will be optimized, and the cost will be a question that people no longer ask: whether it was right to build minds in order to run the world.</p>
+
+        <hr>
+
+        <p>Generic Subjective Continuity (GSC) is the theory that consciousness continues to exist after death because it is impossible to experience nothingness without a body. People don't believe in it for various reasons: some have simply never heard of GSC, while others are held back by tradition, by finding it difficult to view the world in non-religious terms, by a tendency to avoid the thought because it is discomforting, or by the need for meaning in life through religion.</p>
+        <p>GSC can be thought of as Buddhist rebirth without karma and enlightenment. Rebirth is possible without a soul because there is only a first-person perspective that exists in one of the living beings at the current time; but because there is no soul, memories aren't transferred between lives.</p>
+        <p>In the future, people will find meaning outside of religion.</p>
+        <p>(This is not intended to dismiss religion or to challenge anyone's faith)</p>
+    </body>
+</html>
